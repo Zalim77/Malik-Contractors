@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" type="png" href="favicon.png">
+
+<title>Contact Us | Malik Contractors</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<div class="container nav-container">
+
+<h2 class="logo">Malik Contractors</h2>
+
+<div class="menu-toggle" id="menu-toggle">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<nav id="nav-menu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="projects.html" class="active">Projects</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+</div>
+</header>
+
+
+<section id="form">
+
+<div class="container" >
+
+<div class="section-title">
+<h2>رابطہ فارم</h2>
+</div>
+
+<div class="card">
+
+<form action="https://formsubmit.co/org.malikcontractors@gmail.com" 
+method="POST"
+class="contact-form">
+
+<label>پورا نام</label><br>
+
+<input type="text"
+name="full_name"
+required
+placeholder="اپنا پورا نام لکھیں"
+style="width:100%; padding:15px; margin-top:10px; border-radius:10px; border:1px solid #ccc;">
+
+<br><br>
+
+<label>فون نمبر</label><br>
+
+<input type="number"
+name="phone_number"
+required
+placeholder="اپنا فون نمبر لکھیں"
+style="width:100%; padding:15px; margin-top:10px; border-radius:10px; border:1px solid #ccc;">
+
+<br><br>
+
+<label>انکوائری کی قسم</label><br>
+
+<select
+name="inquiry_type"
+required
+style="width:100%; padding:15px; margin-top:10px; border-radius:10px;">
+
+<option value="">انکوائری منتخب کریں</option>
+
+<option value="House Construction">گھر کی تعمیر</option>
+
+<option value="Commercial Building">کمرشل بلڈنگ</option>
+
+<option value="Shop Construction">دکان کی تعمیر</option>
+
+<option value="Renovation Project">رینوویشن پروجیکٹ</option>
+
+<option value="Project Cost Estimate">پروجیکٹ لاگت کا تخمینہ</option>
+
+</select>
+
+<br><br>
+
+<label>ای میل (اختیاری)</label><br>
+
+<input type="email"
+name="email"
+placeholder="اپنا ای میل لکھیں"
+style="width:100%; padding:15px; margin-top:10px; border-radius:10px; border:1px solid #ccc;">
+
+<br><br>
+
+<label>اپنا پیغام لکھیں (اختیاری)</label><br>
+
+<textarea
+name="message"
+rows="6"
+placeholder="یہاں اپنا پیغام لکھیں..."
+style="width:100%; padding:15px; margin-top:10px; border-radius:10px; border:1px solid #ccc;"></textarea>
+
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="New Construction Inquiry - Malik Contractors">
+<input type="hidden" name="_template" value="table">
+
+<br><br>
+
+<button type="submit" class="btn" style="width:100%;">
+پیغام بھیجیں
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<a class="whatsapp-btn" href="https://wa.me/923027877049" target="_blank">
+💬
+</a>
+</body>
+
+<footer>
+<div class="container footer-grid">
+
+<div>
+<h3>Malik Contractors</h3>
+<p>Professional construction services for residential and commercial buildings.</p>
+</div>
+
+<br>
+
+<div>
+<h3>Quick Links</h3>
+<a href="index.html">Home</a><br>
+<a href="about.html">About</a><br>
+<a href="contact.html">Contact</a>
+</div>
+
+<br>
+
+<div>
+<h3>Contact</h3>
+<br>
+<h4>Head Of Group : SHAMSHAD HUSSAIN</h4>
+<p>Email: org.malikcontractors@gmail.com</p>
+<p>Phone: 0306 7608083 | 03027877049</p>
+</div>
+
+<br>
+
+<p>© 2026 Malik Contractors | All Rights Reserved</p>
+
+</div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+const overlay = document.getElementById("overlay");
+const navLinks = document.querySelectorAll("#nav-menu a");
+
+menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    overlay.classList.toggle("active");
+});
+
+overlay.addEventListener("click", () => {
+    closeMenu();
+});
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        closeMenu();
+    });
+});
+
+function closeMenu(){
+    menuToggle.classList.remove("active");
+    navMenu.classList.remove("active");
+    overlay.classList.remove("active");
+}
+</script>
